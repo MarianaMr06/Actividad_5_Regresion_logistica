@@ -62,7 +62,7 @@ x_costo_total = credicel[["precio", "monto_accesorios"]]
 #Creación de Modelos
 #RIESGO
 print("RIESGO--------------------------------------------------------------------------------------------------------")
-X_train_riesgo, X_test_riesgo, y_train_riesgo, y_test_riesgo = train_test_split(x_riesgo, y_riesgo, test_size = 0.45, random_state = None)
+X_train_riesgo, X_test_riesgo, y_train_riesgo, y_test_riesgo = train_test_split(x_riesgo, y_riesgo, test_size = 0.25, random_state = None)
 escalar = StandardScaler()
 X_train_riesgo = escalar.fit_transform(X_train_riesgo)
 X_test_riesgo = escalar.transform(X_test_riesgo)
@@ -85,7 +85,7 @@ print("Puntaje F1: ", puntajef1_riesgo)
 
 #MONTO FINANCIADO
 print("MONTO FINANCIADO---------------------------------------------------------------------------------------------------------------------")
-X_train_monto_financiado, X_test_monto_financiado, y_train_monto_financiado, y_test_monto_financiado = train_test_split(x_monto_financiado, y_monto_financiado, test_size = 0.45, random_state = None)
+X_train_monto_financiado, X_test_monto_financiado, y_train_monto_financiado, y_test_monto_financiado = train_test_split(x_monto_financiado, y_monto_financiado, test_size = 0.25, random_state = None)
 escalar = StandardScaler()
 X_train_monto_financiado = escalar.fit_transform(X_train_monto_financiado)
 X_test_monto_financiado = escalar.transform(X_test_monto_financiado)
@@ -108,7 +108,7 @@ print("Puntaje F1: ", puntajef1_monto_financiado)
 
 #COSTO TOTAL
 print("COSTO TOTAL-----------------------------------------------------------------------------------------------------------")
-X_train_costo_total, X_test_costo_total, y_train_costo_total, y_test_costo_total = train_test_split(x_costo_total, y_costo_total, test_size = 0.45, random_state = None)
+X_train_costo_total, X_test_costo_total, y_train_costo_total, y_test_costo_total = train_test_split(x_costo_total, y_costo_total, test_size = 0.25, random_state = None)
 escalar = StandardScaler()
 X_train_costo_total = escalar.fit_transform(X_train_costo_total)
 X_test_costo_total = escalar.transform(X_test_costo_total)
