@@ -107,6 +107,15 @@ print("Sensibilidad:", sensibilidad_riesgo)
 puntajef1_riesgo = f1_score(y_test_riesgo, y_pred_riesgo, average = "binary", pos_label = "menor")
 print("Puntaje F1: ", puntajef1_riesgo)
 
+# Coeficientes
+coeficientes = algoritmo.coef_
+print("Coeficientes:", coeficientes)
+
+# Intercepto
+intercepto = algoritmo.intercept_
+print("Intercepto:", intercepto)
+
+
 #MONTO FINANCIADO
 print("MONTO FINANCIADO---------------------------------------------------------------------------------------------------------------------")
 X_train_monto_financiado, X_test_monto_financiado, y_train_monto_financiado, y_test_monto_financiado = train_test_split(x_monto_financiado, y_monto_financiado, test_size = 0.25, random_state = 40)
